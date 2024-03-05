@@ -38,6 +38,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name="com.games37.riversdk.demo.RiverSDKDemoActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <!-- 点击推送通知唤起页面的配置，请在初始化riverSDKApi的-activity添加以下intent-filter -->
+            <intent-filter>
+                <action android:name="ACTION_OPEN_GAME_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- Debug模式配置，上线时请置为false -->
+        <meta-data
+            android:name="RiverSDK.DebugMode"
+            android:value="true" />
     </application>
 
 </manifest>

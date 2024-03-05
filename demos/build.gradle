@@ -1,7 +1,6 @@
 
 plugins {
     id 'com.android.application'
-    id 'kotlin-android'
 }
 
 android {
@@ -16,7 +15,21 @@ android {
         multiDexEnabled true
 
         resValue "string", "app_name", "RiverSDKDemo"
-        manifestPlaceholders = [sdkOrientation          : RIVERSDK_ORIENTATION]
+        manifestPlaceholders = [
+                sdkOrientation : RIVERSDK_ORIENTATION,
+
+        ]
+
+        flavorDimensions "leisure"
+
+        productFlavors{
+            leisure {
+//                manifestPlaceholders = [APP_ICON: "@mipmap/ic_launcher1"]
+            }
+            normal {
+            }
+
+        }
 
     }
 
@@ -34,10 +47,6 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-
-//    kotlinOptions {
-//        jvmTarget = '1.8'
-//    }
 
 }
 
