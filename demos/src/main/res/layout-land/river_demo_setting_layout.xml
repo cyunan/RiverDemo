@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_setting" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center"
+        android:background="@drawable/blue_stroke_rect_bg"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="API接口传参配置"
+                android:textColor="@color/text_color"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_package_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:text="包名"
+                android:textColor="@color/text_color"
+                android:textSize="13sp" />
+
+
+                <Button
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="140dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/orange_stroke_rect_bg"
+                    android:text="取消"
+                    android:textColor="@color/demo_orange_color" />
+
+                <Button
+                    android:id="@+id/btn_confirm"
+                    android:layout_width="140dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/demo_orange_color"
+                    android:text="确认"
+                    android:textColor="@color/text_color" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_weight="7"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_height="300dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/params_text_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text="分享渠道:"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_color_pressed" />
+
+                    <Spinner
+                        android:id="@+id/spinner_socialtype"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/blue_stroke_rect_bg"
+                        android:paddingLeft="5dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/params_text_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text="分享类型:"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_color_pressed" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_share_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_share_link"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:button="@drawable/radio_share_type_selector"
+                            android:checked="true"
+                            android:text="链接"
+                            android:textColor="@color/text_color" />
+
+                        <RadioButton
+                            android:id="@+id/rb_share_image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:button="@drawable/radio_share_type_selector"
+                            android:text="图片"
+                            android:textColor="@color/text_color" />
+
+                        <RadioButton
+                            android:id="@+id/rb_share_image_with_award"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/radio_share_type_selector"
+                            android:text="图片发奖"
+                            android:textColor="@color/text_color" />
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_share_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/params_text_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text="分享标题:"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_color_pressed" />
+
+                    <EditText
+                        android:id="@+id/edt_share_title"
+                        style="@style/RiverSDKDemo_SettingEditTextStyle"
+                        android:singleLine="true"
+                        android:hint="请输入标题" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_share_link"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/params_text_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text="分享链接:"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_color_pressed" />
+
+                    <EditText
+                        android:id="@+id/edt_share_link"
+                        style="@style/RiverSDKDemo_SettingEditTextStyle"
+                        android:hint="请输入分享链接" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_share_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/params_text_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text="分享图片:"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_color_pressed" />
+
+                    <EditText
+                        android:id="@+id/edt_share_img"
+                        style="@style/RiverSDKDemo_SettingEditTextStyle"
+                        android:hint="请输入图片路径" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_award_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/params_text_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text="发奖id:"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_color_pressed" />
+
+                    <EditText
+                        android:id="@+id/edt_award_id"
+                        style="@style/RiverSDKDemo_SettingEditTextStyle"
+                        android:singleLine="true"
+                        android:hint="请输入发奖id" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/params_text_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text="serverId:"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_color_pressed" />
+
+                    <EditText
+                        android:id="@+id/edt_server_id"
+                        style="@style/RiverSDKDemo_SettingEditTextStyle"
+                        android:singleLine="true"
+                        android:hint="请输入serverId" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/params_text_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text="roleId:"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_color_pressed" />
+
+                    <EditText
+                        android:id="@+id/edt_role_id"
+                        style="@style/RiverSDKDemo_SettingEditTextStyle"
+                        android:singleLine="true"
+                        android:hint="请输入roleId" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/params_text_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text="roleName:"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_color_pressed" />
+
+                    <EditText
+                        android:id="@+id/edt_role_name"
+                        style="@style/RiverSDKDemo_SettingEditTextStyle"
+                        android:singleLine="true"
+                        android:hint="请输入roleName" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/params_text_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text="roleLevel:"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_color_pressed" />
+
+                    <EditText
+                        android:id="@+id/edt_role_level"
+                        style="@style/RiverSDKDemo_SettingEditTextStyle"
+                        android:singleLine="true"
+                        android:hint="请输入roleLevel" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/params_text_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text="productId:"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_color_pressed" />
+
+                    <EditText
+                        android:id="@+id/edt_product_id"
+                        style="@style/RiverSDKDemo_SettingEditTextStyle"
+                        android:singleLine="true"
+                        android:hint="请输入商品项id" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/params_text_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text="eventType:"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_color_pressed" />
+
+                    <EditText
+                        android:id="@+id/edt_event_type"
+                        style="@style/RiverSDKDemo_SettingEditTextStyle"
+                        android:singleLine="true"
+                        android:hint="请输入eventType" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/params_text_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text="eventName:"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_color_pressed" />
+
+                    <EditText
+                        android:id="@+id/edt_event_name"
+                        style="@style/RiverSDKDemo_SettingEditTextStyle"
+                        android:singleLine="true"
+                        android:hint="请输入eventName" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/params_text_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text="eventValue:"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_color_pressed" />
+
+                    <EditText
+                        android:id="@+id/edt_event_value"
+                        style="@style/RiverSDKDemo_SettingEditTextStyle"
+                        android:singleLine="true"
+                        android:hint="请输入eventValue" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+
+
+</FrameLayout>

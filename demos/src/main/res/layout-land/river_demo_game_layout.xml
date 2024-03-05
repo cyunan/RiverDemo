@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_main" />
+
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="120dp"
+        android:layout_height="20dp"
+        android:layout_margin="15dp"
+        android:src="@drawable/logo_games37" />
+
+    <TextView
+        android:id="@+id/tv_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/iv_logo"
+        android:layout_margin="15dp"
+        android:text="账号名称"
+        android:textColor="#ffffff"
+        android:textSize="16sp" />
+
+
+    <Button
+        android:id="@+id/btn_setting"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:background="#00000000"
+        android:drawableTop="@drawable/icon_setting"
+        android:text="设置"
+        android:textColor="#ffffff" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_account"
+        android:scrollbarSize="2dp"
+        android:scrollbarThumbVertical="@color/demo_orange_color">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="必接功能"
+                android:textColor="#ffffff"
+                android:layout_marginBottom="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    style="@style/RiverSDKDemo_Landscape_BtnStyle"
+                    android:drawableTop="@drawable/icon_login"
+                    android:id="@+id/btn_auto_login"
+                    android:text="自动登录"/>
+
+                <Button
+                    style="@style/RiverSDKDemo_Landscape_BtnStyle"
+                    android:drawableTop="@drawable/icon_game"
+                    android:id="@+id/btn_add_server"
+                    android:text="登录入服"/>
+
+                <Button
+                    style="@style/RiverSDKDemo_Landscape_BtnStyle"
+                    android:drawableTop="@drawable/icon_google_play"
+                    android:id="@+id/btn_billing"
+                    android:text="SDK储值"/>
+
+                <Button
+                    style="@style/RiverSDKDemo_Landscape_BtnStyle"
+                    android:drawableTop="@drawable/icon_user_center"
+                    android:id="@+id/btn_user_center"
+                    android:text="用户中心"/>
+
+                <Button
+                    style="@style/RiverSDKDemo_Landscape_BtnStyle"
+                    android:drawableTop="@drawable/icon_event"
+                    android:id="@+id/btn_track_event"
+                    android:text="事件打点"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="选接功能"
+                android:textColor="#ffffff"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <Button
+                style="@style/RiverSDKDemo_Landscape_BtnStyle"
+                android:drawableTop="@drawable/icon_switch_large"
+                android:id="@+id/btn_switch_aacount"
+                android:text="切换账号"/>
+
+            <Button
+                style="@style/RiverSDKDemo_Landscape_BtnStyle"
+                android:drawableTop="@drawable/icon_goods"
+                android:id="@+id/btn_get_sku_detail"
+                android:text="获取商品项信息"/>
+
+            <Button
+                style="@style/RiverSDKDemo_Landscape_BtnStyle"
+                android:drawableTop="@drawable/icon_share"
+                android:id="@+id/btn_share"
+                android:text="分享功能"/>
+
+            <Button
+                style="@style/RiverSDKDemo_Landscape_BtnStyle"
+                android:drawableTop="@drawable/icon_faq"
+                android:id="@+id/btn_faq"
+                android:text="客服工单"/>
+
+            <Button
+                style="@style/RiverSDKDemo_Landscape_BtnStyle"
+                android:drawableTop="@drawable/icon_link"
+                android:id="@+id/btn_open_link"
+                android:text="打开链接"/>
+        </LinearLayout>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>
